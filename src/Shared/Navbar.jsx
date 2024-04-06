@@ -15,15 +15,17 @@ const Navbar = () => {
         <NavLink  className={({ isActive}) => isActive ? "text-red-700" : ""
   }to="/">Home</NavLink>
       </li>
-      <li>
-        <NavLink
-         className={({ isActive}) =>  isActive ? "text-red-700" : ""
-       }
-          to="/login"
-        >
-          Login
-        </NavLink>
-      </li>
+   {
+    !user &&    <li>
+    <NavLink
+     className={({ isActive}) =>  isActive ? "text-red-700" : ""
+   }
+      to="/login"
+    >
+      Login
+    </NavLink>
+  </li>
+   }
     </>
   ); 
   return (

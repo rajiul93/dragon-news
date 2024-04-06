@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-
  
 
 const News = ({news}) => {
-    const {title,thumbnail_url,details,total_view,_id} = news;
+    const {title,thumbnail_url,details,_id} = news; 
 
     return (
         <div>
@@ -68,3 +68,7 @@ const News = ({news}) => {
 };
 
 export default News;
+
+News.propTypes = { 
+	news: PropTypes.object
+  }

@@ -1,7 +1,7 @@
+import PropTypes from 'prop-types';
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
-
 const PrivetOutlet = ({ children }) => {
   const { user, loader } = useContext(AuthContext);
   const location =  useLocation()
@@ -19,3 +19,6 @@ const PrivetOutlet = ({ children }) => {
 };
 
 export default PrivetOutlet;
+PrivetOutlet.propTypes = { 
+  children: PropTypes.node
+}
