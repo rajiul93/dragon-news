@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Navbar from "../../Shared/Navbar";
+import LoginWith from "../Login/LoginWith";
 const Registration = () => {
     const {createUser,user} = useContext(AuthContext)
   const handleRegister = (e) => {
@@ -29,7 +30,7 @@ const Registration = () => {
   return (
     <>
       <Navbar />
-      <div className="hero min-h-screen ">
+      <div className="  md:flex justify-center items-end">
         <div className="hero-content ">
           <div className="card shrink-0 w-full max-w-sm shadow-2xl ">
             <form onSubmit={handleRegister} className="card-body">
@@ -86,6 +87,9 @@ const Registration = () => {
             </form>
           </div>
         </div>
+       <div className="hero-content shadow-2xl rounded-2xl">
+       <LoginWith/>
+       </div>
       </div>
     </>
   );
