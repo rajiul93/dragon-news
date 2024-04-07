@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import CategoryListPage from "../Page/CategoryListPage/CategoryListPage";
 import Error from "../Page/Error/Error";
 import Home from "../Page/Home/Home";
+import NewsContainer from "../Page/Home/News/NewsContainer";
 import Login from "../Page/Login/Login";
 import NewsDetails from "../Page/NewsDetails/NewsDetails";
 import Registration from "../Page/Registration.jsx/Registration";
@@ -16,6 +18,16 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        children:[
+          {
+            index:true,
+            element:<NewsContainer/>
+          },
+          {
+            path:"/categories/:category",
+            element:<CategoryListPage/>
+          }
+        ]
       },
       {
         path: "/login",

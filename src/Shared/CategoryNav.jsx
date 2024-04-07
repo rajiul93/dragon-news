@@ -14,7 +14,7 @@ const CategoryNav = () => {
     return (
         <div>
             {
-                categories?.map(category =><li  className="list-none font-medium mt-3" key={category.id}><NavLink>{category.name}</NavLink></li>)
+                categories?.map(category =><li  className="list-none font-medium mt-3" key={category.id}><NavLink to={`/categories/${category.id}`}>{category.name}</NavLink></li>)
             }
         </div>
     );
